@@ -49,24 +49,33 @@
           Never lose a customer again
         </h1>
         <p class="mt-5 text-lg sm:text-xl text-slate-600 leading-relaxed">
-          CallCatch automatically texts customers when you miss their call so you never lose bookings.
+          Businesses miss up to 30% of calls.<br />
+          CallCatch automatically texts customers when you miss one so you never lose the booking.
         </p>
         <button
           onclick="openModal()"
           class="mt-8 inline-flex items-center justify-center rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3.5 shadow-lg shadow-teal-500/25 transition"
         >
-          Start Free Trial
+          Get Early Access
         </button>
+        <ul class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-slate-600 text-sm">
+          <li class="flex items-center gap-2">✔ Works with your existing phone</li>
+          <li class="flex items-center gap-2">✔ 2 minute setup</li>
+          <li class="flex items-center gap-2">✔ Cancel anytime.</li>
+        </ul>
         <!-- Example SMS -->
         <div class="mt-14 flex justify-center">
           <div class="w-full max-w-sm rounded-2xl bg-white border border-slate-200 shadow-xl shadow-slate-200/50 overflow-hidden">
-            <div class="bg-slate-100 px-4 py-2.5 border-b border-slate-200">
+            <div class="bg-slate-100 px-4 py-2.5 border-b border-slate-200 flex items-center justify-between">
               <span class="text-xs font-medium text-slate-500">SMS</span>
+              <span class="text-xs font-medium text-teal-600">No setup required</span>
             </div>
             <div class="p-4 space-y-3">
               <div class="flex justify-end">
-                <div class="max-w-[85%] rounded-2xl rounded-br-md bg-teal-600 text-white px-4 py-3 text-sm">
-                  Hi, you called us earlier and we missed you. Reply here or call back when you’re free – we’d love to help.
+                <div class="max-w-[85%] rounded-2xl rounded-br-md bg-teal-600 text-white px-4 py-3 text-sm space-y-2">
+                  <p>Hi! Sorry we missed your call.</p>
+                  <p>Would you like to book an appointment?</p>
+                  <p>Reply here or book online:<br /><span class="opacity-90">[your booking link]</span></p>
                 </div>
               </div>
               <p class="text-xs text-slate-400 text-right">CallCatch · sent automatically</p>
@@ -76,8 +85,20 @@
       </div>
     </section>
 
-    <!-- How it works -->
+    <!-- Missed call problem -->
     <section class="py-20 px-6 bg-white border-y border-slate-200/80">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Missed calls are lost customers</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">
+          Most local businesses miss 20–40% of incoming calls.<br />
+          Customers usually call the next business if nobody answers.<br />
+          CallCatch instantly texts them so you don't lose the booking.
+        </p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20 px-6 border-y border-slate-200/80">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center">
           How it works
@@ -102,6 +123,13 @@
             <p class="mt-2 text-slate-600 text-sm">They receive a friendly SMS so they can reply or call back.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Social proof placeholder -->
+    <section class="py-12 px-6 bg-teal-50/50 border-y border-slate-200/80">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-slate-600 font-medium">Early testers are joining from local businesses.</p>
       </div>
     </section>
 
@@ -136,7 +164,7 @@
             onclick="openModal()"
             class="mt-6 w-full rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3.5 transition"
           >
-            Start Free Trial
+            Get Early Access
           </button>
         </div>
       </div>
@@ -151,7 +179,7 @@
           onclick="openModal()"
           class="mt-6 inline-flex items-center justify-center rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3.5 transition"
         >
-          Start Free Trial
+          Get Early Access
         </button>
       </div>
     </section>
