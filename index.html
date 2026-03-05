@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CallCatch – Never lose a customer again</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            accent: '#0d9488',
+            accentDark: '#0f766e',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <!-- Nav -->
+  <header class="border-b border-slate-200/80 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="text-xl font-semibold text-slate-900">CallCatch</span>
+      <button
+        onclick="openModal()"
+        class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+      >
+        Join waiting list
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="pt-16 pb-20 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight">
+          Never lose a customer again
+        </h1>
+        <p class="mt-5 text-lg sm:text-xl text-slate-600 leading-relaxed">
+          CallCatch automatically texts customers when you miss their call so you never lose bookings.
+        </p>
+        <button
+          onclick="openModal()"
+          class="mt-8 inline-flex items-center justify-center rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3.5 shadow-lg shadow-teal-500/25 transition"
+        >
+          Start Free Trial
+        </button>
+        <!-- Example SMS -->
+        <div class="mt-14 flex justify-center">
+          <div class="w-full max-w-sm rounded-2xl bg-white border border-slate-200 shadow-xl shadow-slate-200/50 overflow-hidden">
+            <div class="bg-slate-100 px-4 py-2.5 border-b border-slate-200">
+              <span class="text-xs font-medium text-slate-500">SMS</span>
+            </div>
+            <div class="p-4 space-y-3">
+              <div class="flex justify-end">
+                <div class="max-w-[85%] rounded-2xl rounded-br-md bg-teal-600 text-white px-4 py-3 text-sm">
+                  Hi, you called us earlier and we missed you. Reply here or call back when you’re free – we’d love to help.
+                </div>
+              </div>
+              <p class="text-xs text-slate-400 text-right">CallCatch · sent automatically</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20 px-6 bg-white border-y border-slate-200/80">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center">
+          How it works
+        </h2>
+        <p class="mt-2 text-slate-600 text-center max-w-xl mx-auto">
+          Three simple steps to turn missed calls into bookings.
+        </p>
+        <div class="mt-14 grid sm:grid-cols-3 gap-10 sm:gap-8">
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-600 font-bold text-lg flex items-center justify-center mx-auto">1</div>
+            <h3 class="mt-4 font-semibold text-slate-900">Connect your number</h3>
+            <p class="mt-2 text-slate-600 text-sm">Add your business phone number. We work with your existing line.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-600 font-bold text-lg flex items-center justify-center mx-auto">2</div>
+            <h3 class="mt-4 font-semibold text-slate-900">We detect missed calls</h3>
+            <p class="mt-2 text-slate-600 text-sm">When a call is missed, we instantly know and trigger a message.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-600 font-bold text-lg flex items-center justify-center mx-auto">3</div>
+            <h3 class="mt-4 font-semibold text-slate-900">Customers get a text</h3>
+            <p class="mt-2 text-slate-600 text-sm">They receive a friendly SMS so they can reply or call back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who it's for -->
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center">
+          Who it's for
+        </h2>
+        <p class="mt-2 text-slate-600 text-center max-w-xl mx-auto">
+          Built for local businesses where every call counts.
+        </p>
+        <div class="mt-12 flex flex-wrap justify-center gap-3">
+          <span class="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 font-medium shadow-sm">Barbers</span>
+          <span class="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 font-medium shadow-sm">Salons</span>
+          <span class="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 font-medium shadow-sm">Plumbers</span>
+          <span class="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 font-medium shadow-sm">Garages</span>
+          <span class="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 font-medium shadow-sm">Dentists</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 px-6 bg-white border-y border-slate-200/80">
+      <div class="max-w-md mx-auto text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Simple pricing</h2>
+        <div class="mt-8 rounded-2xl border border-slate-200 bg-slate-50/50 p-8">
+          <div class="text-4xl font-bold text-slate-900">£29</div>
+          <div class="text-slate-600 mt-1">per month</div>
+          <p class="mt-4 text-slate-600 text-sm">One number, unlimited missed-call texts. No hidden fees.</p>
+          <button
+            onclick="openModal()"
+            class="mt-6 w-full rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3.5 transition"
+          >
+            Start Free Trial
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Ready to catch every call?</h2>
+        <p class="mt-3 text-slate-600">Join the waiting list for early access.</p>
+        <button
+          onclick="openModal()"
+          class="mt-6 inline-flex items-center justify-center rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3.5 transition"
+        >
+          Start Free Trial
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-8 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-slate-500 text-sm">© CallCatch</span>
+      <button onclick="openModal()" class="text-slate-500 hover:text-slate-700 text-sm">Join waiting list</button>
+    </div>
+  </footer>
+
+  <!-- Modal: Early access / waiting list -->
+  <div
+    id="modal"
+    class="fixed inset-0 z-50 hidden overflow-y-auto"
+    aria-hidden="true"
+  >
+    <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="flex min-h-full items-center justify-center p-4">
+      <div
+        class="relative w-full max-w-md rounded-2xl bg-white shadow-2xl border border-slate-200 p-8"
+        onclick="event.stopPropagation()"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition"
+          aria-label="Close"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <h3 class="text-xl font-bold text-slate-900">Early access – join the waiting list</h3>
+        <p class="mt-2 text-slate-600 text-sm">We’ll notify you when CallCatch is ready. No spam.</p>
+        <form id="waitlist-form" class="mt-6 space-y-4" onsubmit="handleSubmit(event)">
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@yourbusiness.com"
+              class="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3.5 transition"
+          >
+            Join waiting list
+          </button>
+        </form>
+        <p id="form-success" class="mt-4 text-sm text-teal-600 font-medium hidden">Thanks! We’ll be in touch.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const form = document.getElementById('waitlist-form');
+    const formSuccess = document.getElementById('form-success');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const email = new FormData(e.target).get('email');
+      // In production: send to your backend / CRM
+      console.log('Waiting list signup:', email);
+      form.classList.add('hidden');
+      formSuccess.classList.remove('hidden');
+      setTimeout(closeModal, 1500);
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
