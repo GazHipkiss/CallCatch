@@ -213,7 +213,9 @@
         </button>
         <h3 class="text-xl font-bold text-slate-900">Early access – join the waiting list</h3>
         <p class="mt-2 text-slate-600 text-sm">We’ll notify you when CallCatch is ready. No spam.</p>
-        <form id="waitlist-form" class="mt-6 space-y-4" onsubmit="handleSubmit(event)">
+        <form id="waitlist-form" class="mt-6 space-y-4" action="https://formspree.io/f/mzdjprwz" method="POST" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="_subject" value="CallCatch waiting list – new signup" />
+          <input type="hidden" name="_replyto" id="form-replyto" value="" />
           <div>
             <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">Email address</label>
             <input
@@ -252,14 +254,35 @@
       document.body.style.overflow = '';
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
       e.preventDefault();
-      const email = new FormData(e.target).get('email');
-      // In production: send to your backend / CRM
-      console.log('Waiting list signup:', email);
-      form.classList.add('hidden');
-      formSuccess.classList.remove('hidden');
-      setTimeout(closeModal, 1500);
+      const formEl = e.target;
+      const email = formEl.querySelector('input[name="email"]').value;
+      formEl.querySelector('#form-replyto').value = email;
+      const submitBtn = formEl.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      try {
+        const res = await fetch(formEl.action, {
+          method: 'POST',
+          body: new FormData(formEl),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          formEl.classList.add('hidden');
+          formSuccess.classList.remove('hidden');
+          setTimeout(closeModal, 1500);
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+          alert('Something went wrong. Please try again.');
+        }
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        alert('Something went wrong. Please try again.');
+      }
     }
 
     document.addEventListener('keydown', function (e) {
